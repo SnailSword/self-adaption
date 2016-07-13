@@ -3,34 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/letter-app.css">
+    <link rel="stylesheet" href="css/app.css">
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <div class="div-pretend-table clearfloat">
-        <!--dpt-first:-->
-        <!--dpt-item:-->
-        <div class="dpt-first">来信情况</div>
-        <div class="dpt-item-ts">
-            <div class="dpt-item-s">
-                <div class="dpt-item-p1 ">姓名:</div>
-                <div class="dpt-item-p2"><input type="text"></div>
-            </div>
-            <div class="dpt-item-s">
-                <div class="dpt-item-p1 ">来信时间</div>
-                <div class="dpt-item-p2 ">2016-07-04</div>
-            </div>
-        </div>
-        <div class="dpt-item-b">
-            <div class="dpt-item-p1">来信内容</div>
-            <div class="dpt-item-p2">一行显示的内容</div>
-        </div>
-        <div class="dpt-item-multi-line">
-            <div class="dpt-item-p1">来信内容</div>
-            <div class="dpt-item-p2">多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</div>
+    <div class="flex-form clearfloat">
+        <div class="ff-title">--- 我要写信 ---</div>
+        <div class="ff-item-s"><span>姓名:  </span>   <input type="text"></div>
+        <div class="ff-item-s"><span>职业：  </span>  <select name="" id=""><option value="">请选择</option> </select> </div>
+        <div class="ff-item-s"><span>通讯地址:</span>  <input type="text"></div>
+        <div class="ff-item-s"><span>邮编:  </span>   <input type="text"></div>
+        <div class="ff-item-s"><span>联系电话:</span> <input type="text"></div>
+        <div class="ff-item-s"><span>电子邮件:</span> <input type="text"></div>
+        <div class="ff-item-b"><span>信件标题:</span> <input type="text"></div>
+        <div class="ff-item-b-multi-line"><span>信件内容:</span> <textarea></textarea> </div>
+        <div class="ff-item-submit">
+            <button>提交</button>
+            <button>取消</button>
         </div>
     </div>
-    <script src="js/position-paper.js"></script>
+    <script src="js/letter.js"></script>
 </body>
 </html>

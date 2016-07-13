@@ -11,6 +11,8 @@ $(document).ready(function () {
 
 function changeWidth() {
     var width = $(".div-pretend-table").width();
+    width = width-width%4;
+    $('.dpt-first').css("width",width-1);
     if(width<=600&&width>=300) {
         $('.dpt-item-p1').css("width", width / 2 - 1);
         $('.dpt-item-p2').css("width", width / 2 - 1);
