@@ -11,10 +11,10 @@
     <div class="zf-flex-form clearFix">
         <div class="ff-title">--- 我要写信 ---</div>
         <div class="ff-hr"></div>
-        <div class="ff-item-s clearFix"><b>*</b><span>姓ssssssssssss名:  </span>   <input required="required" type="text"></div>
+        <div class="ff-item-s clearFix"><b>*</b><span>姓名:  </span>   <input required="required" type="text"></div>
         <div class="ff-item-s clearFix"><b class="not-required">*</b><span>职业：  </span>  <select name="" id=""><option value="">请选择</option> </select> </div>
         <div class="ff-item-s clearFix"><b class="not-required">*</b><span>通讯地址:</span>  <input type="text"></div>
-        <div class="ff-item-s clearFix"><b>*</b><span>邮编:  </span>   <input type="text"></div>
+        <div class="ff-item-s clearFix"><b>*</b><span>邮政编码:  </span>   <input type="text"></div>
         <div class="ff-item-s clearFix"><b>*</b><span>联系电话:</span> <input required="required" type="text"></div>
         <div class="ff-item-s clearFix"><b class="not-required">*</b><span>电子邮件:</span> <input type="text"></div>
         <div class="ff-item-b clearFix"><b>*</b><span>信件标题:</span> <input type="text"></div>
@@ -38,6 +38,18 @@
         else if (IE7)
         {
             $('.ff-item-s').css({"height":"38px"});
+//            var arr = document.getElementsByTagName('input')
+//            getBoundingClientRect();
+        }
+        var isIE = function(ver){
+            var b = document.createElement('b');
+            b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
+            return b.getElementsByTagName('i').length === 1
+        }
+        if(isIE()){
+            $('.zf-flex-form').css('min-width','600px');
+            $('.zf-flex-form button').css('margin','20px');
+
         }
     </script>
 </body>

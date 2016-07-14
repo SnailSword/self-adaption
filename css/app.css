@@ -36,7 +36,7 @@
 /*----------------------------------------------*/
 /*---------------------------------------*/
 .zf-flex-form{
-    min-width: 400px;
+    min-width: 500px;
     max-width: 800px;
     margin: 30px auto;
     width: auto;
@@ -58,7 +58,6 @@
     *line-height:28px;
     *padding:2px 0;
 }
-
 .zf-flex-form .ff-title{
     width: 100%;
     text-align: center;
