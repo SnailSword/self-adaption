@@ -1,5 +1,5 @@
 /*------------------------------------------*/
-.flex-table td{
+.zf-flex-table td{
     background-color: #F8F8F8;
     height: 10px;
     overflow: hidden;
@@ -7,124 +7,93 @@
     width: 25%;
     font-size: 14px;
 }
-.flex-table td:nth-child(2),.flex-table td:nth-child(3),.flex-table th:nth-child(2),.flex-table th:nth-child(3){
+.zf-flex-table td:nth-child(2),.zf-flex-table td:nth-child(3),.zf-flex-table th:nth-child(2),.zf-flex-table th:nth-child(3){
     text-align: center;
 }
-.flex-table th{
+.zf-flex-table th{
     background-color: #EEEEEE;
     color: #A13B3B;
     width: 25%;
     font-size: 14px;
     font-weight: inherit;
 }
-.flex-table{
+.zf-flex-table{
     width: 90%;
     height: 90%;
     font-family: "微软雅黑",​宋体;
     margin: 10px auto;
 }
-.flex-table-inside{
+.zf-flex-table-inside{
     width: 100%;
     height: 100%;
 }
-.flex-table th:first-child,td:first-child{
+.zf-flex-table th:first-child,td:first-child{
     width: 50%;
     text-align: left;
     padding: 8px 0px 8px 20px;
     line-height: 28px;
 }
 /*----------------------------------------------*/
-.div-pretend-table{
-    font-family: "微软雅黑",​宋体;
-    min-width: 300px;
-    margin: 10px;
-    border-top: 1px #5182BB solid;
-    border-left: 1px #5182BB solid;
-    color: #000;
-}
-.dpt-first{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 800;
-    border-bottom: 1px #5182BB solid;
-    border-right: 1px #5182BB solid;
-    background-color: #5182BB;
-    color: #fff;
-    padding:15px 0 ;
-}
-.dpt-item-p1,.dpt-item-p2{
-    border-bottom: 1px #5182BB solid;
-    border-right: 1px #5182BB solid;
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-
-}
-.dpt-item-p1{
-    font-weight: 600;
-}
-.dpt-item-s,.dpt-item-b{
-    float: left;
-}
-.dpt-item-multi-line .dpt-item-p2{
-    float: none;
-    height: 200px;
-    overflow:auto;
-}
-.dpt-item-p2 input{
-    border: none;
-    outline: none;
-    line-height: 40px;
-    float: left;
-    margin-left: 10px;
-}
 /*---------------------------------------*/
-.flex-form{
+.zf-flex-form{
     min-width: 400px;
     max-width: 800px;
     margin: 30px auto;
     width: auto;
     height: auto;
-    border: solid #bfbfbf 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+    /*border: solid #bfbfbf 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*-moz-border-radius: 2px;*/
+    /*border-radius: 2px;*/
     padding: 20px;
+    font-family: "微软雅黑",​宋体;
 }
-.flex-form .ff-title{
+.zf-flex-form input[type="text"],.zf-flex-form select{
+    height: 28px;
+    outline: none;
+    height:30px\9;
+    line-height:28px\9;
+    padding:2px 0\9;
+    *height:30px;
+    *line-height:28px;
+    *padding:2px 0;
+}
+
+.zf-flex-form .ff-title{
     width: 100%;
     text-align: center;
-    margin: 10px 10px 25px 10px;
+    /*margin: 10px 10px 25px 10px;*/
+    margin-bottom: 25px;
     font-size: large;
     border-bottom:solid #bfbfbf 1px ;
+    float: left;
 }
-.flex-form>div{
+.zf-flex-form>div{
     float: left;
     box-sizing:border-box;
     padding-bottom: 20px;
 }
-.flex-form .ff-item-s{
+.zf-flex-form .ff-item-s{
     width: 50%;
 }
-.flex-form .ff-item-b{
+.zf-flex-form .ff-item-b{
     width: 100%;
 }
-.flex-form span{
+.zf-flex-form span{
     display: inline-block;
     width: 110px;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     text-align:justify;
 }
-.flex-form .ff-item-s input,.flex-form .ff-item-s select{
+.zf-flex-form .ff-item-s input,.zf-flex-form .ff-item-s select{
     box-sizing: border-box;
     width: 160px;
 }
-.flex-form .ff-item-b input{
+.zf-flex-form .ff-item-b input{
     width: auto;
 }
 @media screen and (max-width: 650px) {
-    .flex-form .ff-item-s{
+    .zf-flex-form .ff-item-s{
         width: 100%;
     }
 }
@@ -143,16 +112,107 @@ div.ff-item-submit{
     float: right;
     margin-right: 50px;
 }
+.zf-flex-form b.not-required{
+    color: transparent;
+}
+textarea{
+    resize: none;
+    outline: none;
+    height: 200px;
+    padding: 5px;
+}
+.ff-item-b-multi-line b{
+    float: left;
+}
+.ff-item-b-multi-line span{
+    float: left;
+}
 
+/*.zf-flex-form{*/
+    /*font-family: '微软雅黑','宋体';*/
+    /*font-size: 14px;*/
+/*}*/
+/*.zf-flex-form input{*/
+    /*width: 250px;*/
+    /*height: 18px;*/
+    /*border: 1px solid #bbbbbb;*/
+    /*padding: 5px 0px 5px 2px;*/
+    /*vertical-align: middle;*/
+    /*outline: none;*/
+    /*font: 12px/1.5 "微软雅黑", \5b8b\4f53;*/
+    /*float: right;*/
+    /*margin-right: 60px;*/
+/*}*/
+/*.zf-flex-form select{*/
+    /*height: 30px;*/
+    /*vertical-align: middle;*/
+    /*outline: none;*/
+    /*padding: 5px 0px 5px 2px;*/
 
+    /*font: 12px/1.5 "微软雅黑", \5b8b\4f53;*/
+    /*float: right;*/
+    /*margin-right: 60px;*/
+/*}*/
+/*.ff-item-s span,.ff-item-b span{*/
+    /*width: 100px;*/
+    /*overflow: hidden;*/
+    /*height: 28px;*/
+    /*line-height: 28px;*/
+    /*color: #000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+/*}*/
+.zf-flex-form .ff-title{
+    color: #7e6547;
+    font-size: 28px;
+    text-align: center;
+    line-height: 40px;
+}
+/*.zf-flex-form .ff-hr{*/
+    /*height: 20px;*/
+    /*font-size: 14px;*/
+    /*color: #aaa;*/
+    /*text-align: center;*/
+    /*line-height: 46px;*/
+    /*background: url('../img/bar02.jpg') bottom repeat-x;*/
+/*}*/
+.zf-flex-form b {
+    color: #ff0000;
+    font-size: 12px;
+}
+/*.ff-item-s{*/
+    /*float: left;*/
+    /*box-sizing: border-box;*/
+    /*width: 50%;*/
+    /*margin-top: 12px;*/
+/*}*/
+/*.ff-item-b{*/
+    /*float: left;*/
+    /*box-sizing: border-box;*/
+    /*width: 50%;*/
+/*}*/
+.zf-flex-form img{
+    width: 80px;
+    height: 26px;
+}
 
+.zf-flex-form #code input{
+    width: 80px;
+    height: 20px;
+}
+.zf-flex-form #code img{
+    display: inline-block;
+    position: relative;
+    top:9px;
+}
+.zf-flex-form button{
+    width: 62px;
+    height: 25px;
+    font-size: 12px;
+    color: #333;
+}
 
-
-
-
-
-
-
-
-
+.ff-item-b-multi-line span,#code span {
+    margin-right: 5px;
+}
 

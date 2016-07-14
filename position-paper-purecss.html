@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <div class="div-pretend-table clearfloat">
+    <div class="div-pretend-table clearFix">
         <!--zf-dpt-first:-->
         <!--zf-dpt-item:-->
         <div class="zf-dpt-first">来信情况</div>
+            <div class="zf-dpt-item-b">
+                <div class="zf-dpt-item-p1">来信标题</div>
+                <div class="zf-dpt-item-p2">一行显示的内容</div>
+            </div>
+            <div class="zf-dpt-item-multi-line">
+                <div class="zf-dpt-item-p1">来信内容</div>
+                <div class="zf-dpt-item-p2"><p>多行显示的内容内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</p></div>
+            </div>
         <div class="zf-dpt-item-ts">
             <div class="zf-dpt-item-s">
-                <div class="zf-dpt-item-p1 ">来信人</div>
+                <div class="zf-dpt-item-p1">来信人</div>
                 <div class="zf-dpt-item-p2">MR. LI</div>
             </div>
             <div class="zf-dpt-item-s">
@@ -22,14 +30,7 @@
                 <div class="zf-dpt-item-p2 ">2016-07-04</div>
             </div>
         </div>
-        <div class="zf-dpt-item-b">
-            <div class="zf-dpt-item-p1">来信内容</div>
-            <div class="zf-dpt-item-p2">一行显示的内容</div>
-        </div>
-        <div class="zf-dpt-item-multi-line">
-            <div class="zf-dpt-item-p1">来信内容</div>
-            <div class="zf-dpt-item-p2">多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</div>
-        </div>
+        <div class="cf"></div>
         <div class="zf-dpt-first">来信办理情况评价</div>
         <div class="zf-dpt-item-ts">
             <div class="zf-dpt-item-s">
@@ -47,7 +48,7 @@
         </div>
         <div class="zf-dpt-item-multi-line" id="unSat-reason">
             <div class="zf-dpt-item-p1">不满意的原因</div>
-            <div class="zf-dpt-item-p2">多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</div>
+            <div class="zf-dpt-item-p2 ta-inside"> <textarea></textarea> </div>
         </div>
         <div class="zf-dpt-item-line">
             <input type="button" value="提交">
@@ -56,6 +57,7 @@
         </div>
     <script>
         $(document).ready(function () {
+            //点击出不满意
             $('#unSat-reason').css("display","none");
             $('input').click(function () {
                 console.log(1);
@@ -67,7 +69,41 @@
 
                 }
             });
+            //多行文本高度
+//            var letterInRow = $('.zf-dpt-item-multi-line .zf-dpt-item-p2').width()/14;
+//            var totalLetter = $('.zf-dpt-item-multi-line .zf-dpt-item-p2').text().length;
+//            var lines = totalLetter/(letterInRow/14)+1;
+//            height = lines*2.5;
+//            $('.zf-dpt-item-multi-line .zf-dpt-item-p2').css('height',height);
+//            $('.zf-dpt-item-multi-line .zf-dpt-item-p1').css('height',height);
+            if(isIE(8)){
+                $(':text').width(80);
+            }
+            if(isIE(7)){
+
+                fie();
+
+                function fie() {
+                        $('.div-pretend-table').width(558);
+                        $('.zf-dpt-item-s .zf-dpt-item-p2').each(function () {
+                            $(this).css('width','41.9%');
+                        });
+                        $('.zf-dpt-item-b .zf-dpt-item-p2').each(function () {
+                            $(this).css('width','71.1%');
+                        });
+                        $('.zf-dpt-item-b .zf-dpt-item-p1').each(function () {
+                            $(this).css('width','24.9%');
+                        });
+                        $(':text').width(80);
+                    }
+                }
         });
+        var isIE = function(ver){
+            var b = document.createElement('b');
+            b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
+            return b.getElementsByTagName('i').length === 1
+        }
     </script>
+
 </body>
 </html>

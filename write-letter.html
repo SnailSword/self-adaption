@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/app.css">
-    <script src="js/jquery.js"></script>
-    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <div class="flex-form clearfloat">
+    <div class="zf-flex-form clearFix">
         <div class="ff-title">--- 我要写信 ---</div>
-        <div class="ff-item-s"><span>姓名:  </span>   <input type="text"></div>
-        <div class="ff-item-s"><span>职业：  </span>  <select name="" id=""><option value="">请选择</option> </select> </div>
-        <div class="ff-item-s"><span>通讯地址:</span>  <input type="text"></div>
-        <div class="ff-item-s"><span>邮编:  </span>   <input type="text"></div>
-        <div class="ff-item-s"><span>联系电话:</span> <input type="text"></div>
-        <div class="ff-item-s"><span>电子邮件:</span> <input type="text"></div>
-        <div class="ff-item-b"><span>信件标题:</span> <input type="text"></div>
-        <div class="ff-item-b-multi-line"><span>信件内容:</span> <textarea></textarea> </div>
+        <div class="ff-hr"></div>
+        <div class="ff-item-s clearFix"><b>*</b><span>姓ssssssssssss名:  </span>   <input required="required" type="text"></div>
+        <div class="ff-item-s clearFix"><b class="not-required">*</b><span>职业：  </span>  <select name="" id=""><option value="">请选择</option> </select> </div>
+        <div class="ff-item-s clearFix"><b class="not-required">*</b><span>通讯地址:</span>  <input type="text"></div>
+        <div class="ff-item-s clearFix"><b>*</b><span>邮编:  </span>   <input type="text"></div>
+        <div class="ff-item-s clearFix"><b>*</b><span>联系电话:</span> <input required="required" type="text"></div>
+        <div class="ff-item-s clearFix"><b class="not-required">*</b><span>电子邮件:</span> <input type="text"></div>
+        <div class="ff-item-b clearFix"><b>*</b><span>信件标题:</span> <input type="text"></div>
+        <div class="ff-item-b-multi-line"><b>*</b><span>信件内容:</span><textarea></textarea> </div>
+        <div class="ff-item-b clearFix"><b>*</b><span>信件类型:</span> <select name=""><option value="">请选择</option> </select></div>
+        <div class="ff-item-b clearFix" id="code"><b>*</b><span>验证码:</span><span><input type="text"></span> <img src="img/code.png" title="点击更换"></div>
         <div class="ff-item-submit">
             <button>提交</button>
             <button>取消</button>
         </div>
     </div>
     <script src="js/letter.js"></script>
+    <script language="javascript">
+        var b_v = navigator.appVersion;
+        var IE6 = b_v.search(/MSIE 6/i) != -1;
+        var IE7 = b_v.search(/MSIE 7/i) != -1;
+        if (IE6)
+        {
+            alert("您的浏览器版本过低，在本系统中不能达到良好的视觉效果，建议你升级到ie8以上！");
+        }
+        else if (IE7)
+        {
+            $('.ff-item-s').css({"height":"38px"});
+        }
+    </script>
 </body>
 </html>

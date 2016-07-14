@@ -1,34 +1,33 @@
 .div-pretend-table{
     font-family: "微软雅黑",​宋体;
     min-width: 300px;
-    margin: 10px;
-    border-top: 1px #5182BB solid;
-    border-left: 1px #5182BB solid;
+    margin: 10px auto;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
     color: #000;
     font-size: 14px;
 }
 .zf-dpt-first{
     text-align: center;
     font-size: 18px;
-    font-weight: 800;
-    border-bottom: 1px #5182BB solid;
-    border-right: 1px #5182BB solid;
-    background-color: #5182BB;
-    color: #fff;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    /*background-color: #5182BB;*/
+    color: #a13b3b;
     padding:15px 0 ;
 }
 .zf-dpt-item-p1,.zf-dpt-item-p2{
-    border-bottom: 1px #5182BB solid;
-    border-right: 1px #5182BB solid;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
     float: left;
     height: 40px;
     line-height: 40px;
-    text-align: center;
     box-sizing: border-box;
 
 }
 .zf-dpt-item-p1{
-    font-weight: 600;
+    background-color: #F8F8F8;
+    text-align: center;
 }
 .zf-dpt-item-s,.zf-dpt-item-b{
     box-sizing: border-box;
@@ -37,22 +36,35 @@
 .zf-dpt-item-multi-line .zf-dpt-item-p2{
     box-sizing: border-box;
     float: none;
-    height: 200px;
+    height:200px;
     overflow:auto;
 }
+.zf-dpt-item-p2{
+    padding-left:20px ;
+}
+
 .zf-dpt-item-p2 input[type="text"]{
-    border: none;
+    width: 135px;
+    border: 1px solid #999999;
     outline: none;
-    line-height: 38px;
+    line-height: 20px;
     float: left;
     margin-left: 10px;
+    margin-top: 9px;
+}
+.zf-dpt-item-line input[type='button']{
+    font-family: "微软雅黑",​宋体;
+    height: 29px;
+    cursor: pointer;
+    width: 66px;
+    font-size: 16px;
 }
 .zf-dpt-item-line{
     box-sizing: border-box;
     width: 100%;
     float: left;
-    border-bottom: 1px #5182BB solid;
-    border-right: 1px #5182BB solid;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
     height: 40px;
     text-align: center;
     line-height: 40px;
@@ -100,12 +112,27 @@
         width: 70%;
     }
     .zf-dpt-item-p2 input[type="text"]{
-        width: 150px;
+        width: 130px;
+    }
+    .zf-dpt-item-multi-line .zf-dpt-item-p2{
+        height: 300px;
     }
 }
+.cf{
+    clear: both;
+}
+.zf-dpt-item-multi-line textarea{
+    resize: none;
+    height: 90%;
+    width: 95%;
+    outline: none;
+    margin: 10px auto!important;
+    overflow:hidden;
 
-
-
+}
+.zf-dpt-item-multi-line .ta-inside{
+    overflow:hidden;
+}
 
 
 
