@@ -1,0 +1,117 @@
+.div-pretend-table{
+    font-family: "微软雅黑",​宋体;
+    min-width: 300px;
+    margin: 10px;
+    border-top: 1px #5182BB solid;
+    border-left: 1px #5182BB solid;
+    color: #000;
+    font-size: 14px;
+}
+.zf-dpt-first{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    border-bottom: 1px #5182BB solid;
+    border-right: 1px #5182BB solid;
+    background-color: #5182BB;
+    color: #fff;
+    padding:15px 0 ;
+}
+.zf-dpt-item-p1,.zf-dpt-item-p2{
+    border-bottom: 1px #5182BB solid;
+    border-right: 1px #5182BB solid;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.zf-dpt-item-p1{
+    font-weight: 600;
+}
+.zf-dpt-item-s,.zf-dpt-item-b{
+    box-sizing: border-box;
+    float: left;
+}
+.zf-dpt-item-multi-line .zf-dpt-item-p2{
+    box-sizing: border-box;
+    float: none;
+    height: 200px;
+    overflow:auto;
+}
+.zf-dpt-item-p2 input[type="text"]{
+    border: none;
+    outline: none;
+    line-height: 38px;
+    float: left;
+    margin-left: 10px;
+}
+.zf-dpt-item-line{
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    border-bottom: 1px #5182BB solid;
+    border-right: 1px #5182BB solid;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.zf-dpt-item-b {
+    width: 100%;
+}
+.zf-dpt-item-b .zf-dpt-item-p1,.zf-dpt-item-b .zf-dpt-item-p2{
+    width: 50%;
+}
+.zf-dpt-item-s,.zf-dpt-item-multi-line .zf-dpt-item-p1{
+    width: 50%;
+}
+.zf-dpt-item-s .zf-dpt-item-p1,.zf-dpt-item-s .zf-dpt-item-p2{
+    width: 50%;
+}
+.zf-dpt-item-multi-line .zf-dpt-item-p1{
+    line-height: 200px;
+    height: 200px;
+    width:160px;
+}
+.zf-dpt-item-b .zf-dpt-item-p1{
+    width: 25%;
+}
+.zf-dpt-item-b .zf-dpt-item-p2{
+    width: 75%;
+}
+@media screen and (max-width: 650px){
+    .zf-dpt-item-s,.zf-dpt-item-multi-line .zf-dpt-item-p1,.zf-dpt-item-multi-line .zf-dpt-item-p2{
+        width: 100%;
+    }
+
+    .zf-dpt-item-s .zf-dpt-item-p1,.zf-dpt-item-s .zf-dpt-item-p2{
+        width: 50%;
+    }
+    .zf-dpt-item-multi-line .zf-dpt-item-p1{
+        height:40px;
+        line-height: 40px;
+    }
+    .zf-dpt-item-b .zf-dpt-item-p1{
+        width: 30%;
+    }
+    .zf-dpt-item-b .zf-dpt-item-p2{
+        width: 70%;
+    }
+    .zf-dpt-item-p2 input[type="text"]{
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

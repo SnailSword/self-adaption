@@ -2,7 +2,6 @@
  * Created by Saniac on 2016/7/13.
  */
 $(document).ready(function () {
-
     changeWidth();
     window.onresize=function(){
         changeWidth();

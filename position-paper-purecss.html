@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/pp-app.css">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="div-pretend-table clearfloat">
+        <!--zf-dpt-first:-->
+        <!--zf-dpt-item:-->
+        <div class="zf-dpt-first">来信情况</div>
+        <div class="zf-dpt-item-ts">
+            <div class="zf-dpt-item-s">
+                <div class="zf-dpt-item-p1 ">来信人</div>
+                <div class="zf-dpt-item-p2">MR. LI</div>
+            </div>
+            <div class="zf-dpt-item-s">
+                <div class="zf-dpt-item-p1 ">来信时间</div>
+                <div class="zf-dpt-item-p2 ">2016-07-04</div>
+            </div>
+        </div>
+        <div class="zf-dpt-item-b">
+            <div class="zf-dpt-item-p1">来信内容</div>
+            <div class="zf-dpt-item-p2">一行显示的内容</div>
+        </div>
+        <div class="zf-dpt-item-multi-line">
+            <div class="zf-dpt-item-p1">来信内容</div>
+            <div class="zf-dpt-item-p2">多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</div>
+        </div>
+        <div class="zf-dpt-first">来信办理情况评价</div>
+        <div class="zf-dpt-item-ts">
+            <div class="zf-dpt-item-s">
+                <div class="zf-dpt-item-p1">您的来信流水号</div>
+                <div class="zf-dpt-item-p2"><input type="text"></div>
+            </div>
+            <div class="zf-dpt-item-s">
+                <div class="zf-dpt-item-p1 ">您的来信提取码</div>
+                <div class="zf-dpt-item-p2 "><input type="text"></div>
+            </div>
+        </div>
+        <div class="zf-dpt-item-b">
+            <div class="zf-dpt-item-p1">您对答复的评价</div>
+            <div class="zf-dpt-item-p2"><input type="radio" name="isSat" value="0" />1.非常满意 <input type="radio" name="isSat" value="1" />2.满意 <input type="radio" name="isSat" value='2' />3.不满意</div>
+        </div>
+        <div class="zf-dpt-item-multi-line" id="unSat-reason">
+            <div class="zf-dpt-item-p1">不满意的原因</div>
+            <div class="zf-dpt-item-p2">多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容多行显示的内容</div>
+        </div>
+        <div class="zf-dpt-item-line">
+            <input type="button" value="提交">
+            <input type="button" value="取消">
+        </div>
+        </div>
+    <script>
+        $(document).ready(function () {
+            $('#unSat-reason').css("display","none");
+            $('input').click(function () {
+                console.log(1);
+                if($(this).attr('value')=="2"){
+                    $('#unSat-reason').css("display","block");
+                }
+                else {
+                    $('#unSat-reason').css("display","none");
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

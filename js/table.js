@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 function wordLimit(item) {
     $(item).each(function(){
-        var maxWidth=$(this).width()/parseInt($(".flex-table").css("font-size"))-2;
+        var maxWidth=$(this).width()/parseInt($(".flex-table").css("font-size"));
         if($(this).text().length>maxWidth){
             $(this).text($(this).text().substring(0,maxWidth));
             $(this).html($(this).html()+'...');
